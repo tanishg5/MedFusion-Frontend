@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Tesseract from 'tesseract.js'
-function Ocr(props) {
+function Ocr({extractedtext}) {
   const [file , setfile] = useState();
   const [progress , setProgress] = useState(0);
   const [result , setResult] = useState("");
@@ -19,7 +19,7 @@ function Ocr(props) {
       }}
     ).then (({data:{text}})=>{
        setResult(text);
-       props.extractedtext(text);
+       extractedtext(text);
     })
   }
   return (

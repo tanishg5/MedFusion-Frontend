@@ -41,3 +41,20 @@ function Report() {
 }
 
 export default Report
+
+// You're rendering the <Ocr /> component inside Report.jsx.
+
+// You're passing a function called handleExtractedText as a prop named extractedtext.
+
+// This is like saying:
+// 👉 “Hey Ocr, here’s a function you can call when you're done extracting text.”
+
+// Now inside the Ocr component:
+
+// You receive props.extractedtext — which is that same function from Report.
+
+// Later, in this code:
+
+// You're using destructuring here to directly pull out extractedtext from the props object.
+
+// Now inside Ocr, you can use extractedtext(...) as a regular function.
